@@ -1,0 +1,29 @@
+<div class="container">
+
+  <div class="home-card" [style.backgroundImage]="'url(' + imageUrl + ')'">
+    <div class="home-card-content">
+      <h2>DISCOVER THE COLORFUL WORLD</h2>
+      <h2 id="title">{{cardTitle}}</h2>
+      <p id="text">“So much of who we are is where we have been.” – WILLIAM LANGEWIESCHE</p>
+      <hr>
+      <button (click)="navigateToDiscover()">Discover now</button>
+     
+    </div>
+  </div><br>
+
+  <router-outlet></router-outlet><br>
+
+   <div>
+    <p>OUR SERVICES</p><br>
+    <app-service-card></app-service-card>
+  </div><br>
+   
+  <p>MOST POPULAR</p><br>
+  <div class="cities-container">
+    <div *ngFor="let city of cities | slice:0:6" class="city-card">
+      <app-city-card [city]="city" (visitNow)="onVisit($event)"></app-city-card><br>
+    </div>
+
+  </div>
+
+</div>

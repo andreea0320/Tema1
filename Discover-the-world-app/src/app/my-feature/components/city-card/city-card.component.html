@@ -1,0 +1,8 @@
+<div class="city-card" [style.backgroundImage]="'url(' + city.image + ')'">
+    <div class="city-card-content">
+      <h2>{{ city.name }}</h2>
+      <p>{{ city.description }}</p>
+      <button class="btn btn-primary" (click)="onVisitNow()">Visit Now</button>
+    </div>
+</div>
+  

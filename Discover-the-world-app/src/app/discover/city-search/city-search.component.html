@@ -1,0 +1,14 @@
+<div class="content">
+<p>Search & Book all our destinations</p><br>
+<input type="text" id="search" placeholder="Select your city" [(ngModel)]="searchItem">
+<button (click)="search()">Search</button>
+</div>
+
+<div *ngIf="selectedCities">
+    <div class="cities"*ngFor="let city of selectedCities">
+        <app-city-card [city]="city"></app-city-card><br>
+    </div>
+   
+</div>
+
+
